@@ -1,12 +1,10 @@
-import React from 'react';
-import Hello from './components/Hello';
+import React from 'react'
 
-function App() {
+const App = () => {
   return (
-    <div className="App">
-      <Hello />
+    <div>
     </div>
-  );
+  )
 }
 
-export default App;
+export default App

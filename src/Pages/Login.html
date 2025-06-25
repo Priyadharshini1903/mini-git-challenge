@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Login</title>
+  <link rel="stylesheet" href="Login.css" />
+</head>
+<body>
+
+  <form class="fm">
+    <h2>LOGIN</h2>
+    <label>Username</label>
+    <input type="text" placeholder="Enter your Name" required /><br />
+
+    <label>Email Id</label>
+    <input type="email" placeholder="Enter Email Id" required /><br />
+
+    <label>Password</label>
+    <input type="password" placeholder="Enter your Password" required /><br />
+
+    <button class="bt" type="submit">Submit</button>
+    <p>Don't have an account? <a href="Signup.html">Sign Up</a></p>
+  </form>
+
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      const loginForm = document.querySelector(".fm");
+
+      loginForm.addEventListener("submit", function (e) {
+        e.preventDefault(); // Stop page reload
+
+        const inputs = loginForm.querySelectorAll("input");
+
+        const username = inputs[0].value.trim();
+        const email = inputs[1].value.trim();
+        const password = inputs[2].value.trim();
+
+        if (!username || !email || !password) {
+          alert("Please fill in all fields.");
+          return;
+        }
+
+        alert("Login successful!");
+        // Optional: Redirect after login
+        // window.location.href = "dashboard.html";
+      });
+    });
+  </script>
+
+</body>
+</html>
